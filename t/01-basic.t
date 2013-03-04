@@ -11,7 +11,8 @@ use Test::Deep::Type;
 # the first type is an object that implements 'validate', just like
 # MooseX::Types and Moose::Meta::TypeConstraint do
 {
-    package TypeHi;
+    package MyType::TypeHi;
+    use overload('""' => sub { 'TypeHi' });
     sub validate
     {
         my ($self, $val) = @_;
@@ -21,7 +22,7 @@ use Test::Deep::Type;
     }
 }
 
-sub TypeHi { bless {}, 'TypeHi' }
+sub TypeHi { bless {}, 'MyType::TypeHi' }
 
 is(TypeHi->validate('hi'), undef, 'validation succeeds (no error)');
 is(TypeHi->validate('hello'), "'hello' is not a 'hi'", 'validation fails with error');
@@ -138,7 +139,7 @@ EOM
 
 like(
     $results[3]->{diag},
-    qr/\A^Validating \$data->{"greeting"} as an unknown type$
+    qr/\A^Validating \$data->\{"greeting"\} as an unknown type$
 ^   got : Can't figure out how to use 'not a ref!' as a type.*$
 ^expect : no error$/ms,
     'diagnostics are clear that we cannot figure out how to use the type',

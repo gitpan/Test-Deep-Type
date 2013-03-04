@@ -10,7 +10,9 @@ build_requires:
   Test::Fatal: 0
   Test::More: 0.88
   Test::NoWarnings: 1.04
+  Test::Requires: 0
   Test::Tester: 0.108
+  overload: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -28,7 +30,7 @@ no_index:
 provides:
   Test::Deep::Type:
     file: lib/Test/Deep/Type.pm
-    version: 0.001
+    version: 0.002
 requires:
   Exporter: 0
   Safe::Isa: 0
@@ -42,7 +44,7 @@ requires:
 resources:
   homepage: http://metacpan.org/module/Test::Deep::Type
   repository: https://github.com/karenetheridge/Test-Deep-Type.git
-version: 0.001
+version: 0.002
 x_Dist_Zilla:
   perl:
     version: 5.016002
@@ -186,11 +188,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::Compile
       name: Test::Compile
-      version: 2.000
+      version: 2.001
     -
       class: Dist::Zilla::Plugin::Test::MinimumVersion
       name: Test::MinimumVersion
-      version: 2.000002
+      version: 2.000003
     -
       class: Dist::Zilla::Plugin::MetaTests
       name: MetaTests

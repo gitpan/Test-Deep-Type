@@ -8,11 +8,13 @@ Makefile.PL
 README
 dist.ini
 examples/demo.t
+examples/synopsis.t
 lib/Test/Deep/Type.pm
 t/00-check-deps.t
 t/00-compile.t
 t/01-basic.t
 t/02-verify-example.t
+t/03-moosex-types.t
 xt/author/pod-spell.t
 xt/release/changes_has_content.t
 xt/release/cpan-changes.t

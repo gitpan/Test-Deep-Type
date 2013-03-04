@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Test::Deep::Type;
 {
-  $Test::Deep::Type::VERSION = '0.001';
+  $Test::Deep::Type::VERSION = '0.002';
 }
-# git description: 639e910
+# git description: v0.001-6-g6877d90
 
 BEGIN {
   $Test::Deep::Type::AUTHORITY = 'cpan:ETHER';
@@ -95,8 +95,11 @@ sub _type_name
     my ($self, $type) = @_;
 
     # use $type->name if we can
-    my $name_sub = $type->$_can('name');
-    return $name_sub->() if $name_sub;
+    my $name = try { $type->name };
+    return $name if $name;
+
+    # ...or stringify, if possible
+    return "$type" if overload::Method($type, '""');
 
     # ...or its package name, if it has one
     my $class = blessed($type);
@@ -125,7 +128,7 @@ Test::Deep::Type - A Test::Deep plugin for validating type constraints
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -135,9 +138,15 @@ version 0.001
     use MooseX::Types::Moose 'Str';
 
     cmp_deeply(
-        { message => 'ack I am slain' },
-        { message => is_type(Str) },
-        'message is a plain string',
+        {
+            message => 'ack I am slain',
+            counter => 123,
+        },
+        {
+            message => is_type(Str),
+            counter => is_type(sub { die "not an integer" unless int($_[0]) eq $_[0] }),
+        },
+        'message is a plain string, counter is a number',
     );
 
 =head1 DESCRIPTION
