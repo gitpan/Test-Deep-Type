@@ -1,5 +1,11 @@
 Revision history for Test-Deep-Type
 
+0.003     2013-03-06 12:33:50 PST-0800 (Karen Etheridge)
+          - fixed bad link in 'SEE ALSO'
+          - fixed test failure due to bad plan when MooseX::Types is not
+            available
+          - fixed test failure when Devel::PartialDump is not installed
+
 0.002     2013-03-04 10:43:05 PST-0800 (Karen Etheridge)
           - fix extraction of type name from MooseX::Types types
           - make use of string overload to extract the type name

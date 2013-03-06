@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Test::Deep::Type;
 {
-  $Test::Deep::Type::VERSION = '0.002';
+  $Test::Deep::Type::VERSION = '0.003';
 }
-# git description: v0.001-6-g6877d90
+# git description: v0.002-3-ga68a6b3
 
 BEGIN {
   $Test::Deep::Type::AUTHORITY = 'cpan:ETHER';
@@ -128,7 +128,7 @@ Test::Deep::Type - A Test::Deep plugin for validating type constraints
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -210,7 +210,7 @@ L<Test::Deep>
 
 L<MooseX::Types>
 
-L<Moose::Meta::TypeConstraints>
+L<Moose::Meta::TypeConstraint>
 
 L<Moo>
 
