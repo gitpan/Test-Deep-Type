@@ -15,11 +15,13 @@ t/00-compile.t
 t/01-basic.t
 t/02-verify-example.t
 t/03-moosex-types.t
+weaver.ini
 xt/author/pod-spell.t
 xt/release/changes_has_content.t
 xt/release/cpan-changes.t
 xt/release/distmeta.t
 xt/release/eol.t
+xt/release/kwalitee.t
 xt/release/minimum-version.t
 xt/release/no-tabs.t
 xt/release/pod-coverage.t

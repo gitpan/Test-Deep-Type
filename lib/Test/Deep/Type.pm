@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Test::Deep::Type;
 {
-  $Test::Deep::Type::VERSION = '0.003';
+  $Test::Deep::Type::VERSION = '0.004';
 }
-# git description: v0.002-3-ga68a6b3
+# git description: v0.003-6-gc3fb5ca
 
 BEGIN {
   $Test::Deep::Type::AUTHORITY = 'cpan:ETHER';
@@ -122,13 +122,15 @@ __END__
 
 =pod
 
+=for :stopwords Karen Etheridge
+
 =head1 NAME
 
 Test::Deep::Type - A Test::Deep plugin for validating type constraints
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -208,11 +210,17 @@ I am also usually active on irc, as 'ether' at L<irc://irc.perl.org>.
 
 L<Test::Deep>
 
+L<Test::TypeConstraints>
+
+L<Test::Type>
+
 L<MooseX::Types>
 
 L<Moose::Meta::TypeConstraint>
 
 L<Moo>
+
+L<Type::Tiny>
 
 =head1 AUTHOR
 
