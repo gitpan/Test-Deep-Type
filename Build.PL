@@ -64,7 +64,7 @@ EOW
         "Karen Etheridge <ether\@cpan.org>"
       ],
       "dist_name" => "Test-Deep-Type",
-      "dist_version" => "0.005",
+      "dist_version" => "0.006",
       "license" => "perl",
       "module_name" => "Test::Deep::Type",
       "recommends" => {},

@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 package Test::Deep::Type;
-# git description: v0.004-18-geb952ec
-$Test::Deep::Type::VERSION = '0.005';
+# git description: v0.005-1-ga0de865
+$Test::Deep::Type::VERSION = '0.006';
 # ABSTRACT: A Test::Deep plugin for validating type constraints
 # KEYWORDS: testing tests plugin types
 # vim: set ts=8 sw=4 tw=78 et :
@@ -127,7 +127,7 @@ Test::Deep::Type - A Test::Deep plugin for validating type constraints
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
@@ -211,18 +211,39 @@ I am also usually active on irc, as 'ether' at L<irc://irc.perl.org>.
 
 =over 4
 
+=item *
 
+L<Test::Deep>
+
+=item *
+
+L<Test::TypeConstraints>
+
+=item *
+
+L<Test::Type>
+
+=item *
+
+L<Test::Deep::Matcher>
+
+=item *
+
+L<MooseX::Types>
+
+=item *
+
+L<Moose::Meta::TypeConstraint>
+
+=item *
+
+L<Moo>
+
+=item *
+
+L<Type::Tiny>
 
 =back
-
-* L<Test::Deep>
-* L<Test::TypeConstraints>
-* L<Test::Type>
-* L<Test::Deep::Matcher>
-* L<MooseX::Types>
-* L<Moose::Meta::TypeConstraint>
-* L<Moo>
-* L<Type::Tiny>
 
 =head1 AUTHOR
 
