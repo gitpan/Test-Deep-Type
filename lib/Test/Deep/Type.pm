@@ -1,21 +1,18 @@
 use strict;
 use warnings;
 package Test::Deep::Type;
-{
-  $Test::Deep::Type::VERSION = '0.004';
-}
-# git description: v0.003-6-gc3fb5ca
-
-BEGIN {
-  $Test::Deep::Type::AUTHORITY = 'cpan:ETHER';
-}
+# git description: v0.004-18-geb952ec
+$Test::Deep::Type::VERSION = '0.005';
 # ABSTRACT: A Test::Deep plugin for validating type constraints
+# KEYWORDS: testing tests plugin types
+# vim: set ts=8 sw=4 tw=78 et :
 
 use parent 'Test::Deep::Cmp';
-use Exporter 'import';
 use Scalar::Util qw(blessed reftype);
 use Safe::Isa;
 use Try::Tiny;
+use namespace::clean;
+use Exporter 'import';
 
 our @EXPORT = qw(is_type);
 
@@ -122,7 +119,7 @@ __END__
 
 =pod
 
-=for :stopwords Karen Etheridge
+=encoding UTF-8
 
 =head1 NAME
 
@@ -130,7 +127,7 @@ Test::Deep::Type - A Test::Deep plugin for validating type constraints
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -186,6 +183,8 @@ the data as its parameter. Its return value is treated as a boolean; if it
 also dies with a message describing the failure, this message is used in the
 failure diagnostics.
 
+L<Type::Tiny> types fall into this category, and are fully supported.
+
 =back
 
 =back
@@ -203,24 +202,27 @@ Regular strings describing a type under a particular system
 
 =head1 SUPPORT
 
+=for stopwords irc
+
 Bugs may be submitted through L<https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Deep-Type>.
 I am also usually active on irc, as 'ether' at L<irc://irc.perl.org>.
 
 =head1 SEE ALSO
 
-L<Test::Deep>
+=over 4
 
-L<Test::TypeConstraints>
 
-L<Test::Type>
 
-L<MooseX::Types>
+=back
 
-L<Moose::Meta::TypeConstraint>
-
-L<Moo>
-
-L<Type::Tiny>
+* L<Test::Deep>
+* L<Test::TypeConstraints>
+* L<Test::Type>
+* L<Test::Deep::Matcher>
+* L<MooseX::Types>
+* L<Moose::Meta::TypeConstraint>
+* L<Moo>
+* L<Type::Tiny>
 
 =head1 AUTHOR
 
